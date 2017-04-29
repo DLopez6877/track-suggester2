@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Track Suggester</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil');
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="img/epicodus.png" alt="epicodus logo">
+        <h1>Which Epicodus track should you take?</h1>
+      </div>
+      <div id="begin">
+        <h1>Begin Survey</h1>
+      </div>
+      <div class="initially-hidden" "survey-question">
+        <form>
+          <h4>Do you prefer back-end or front-end?</h4>
+          <select class="form-control" id="question1">
+            <option value="1" class="css">Front-end all the way!</option>
+            <option value="2" class="ruby">Mostly front-end.</option>
+            <option value="3" class="php">Either.</option>
+            <option value="4" class="java">Mostly back-end.</option>
+            <option value="5" class="cnet">I'm all about the back-end.</option>
+          </select>
+          <button type="submit" class="btn btn-info">SUBMIT</button>
+        </form>
+      </div>
+      <div class="initially-hidden" "survey-question">
+        <form id="form1">
+          <h4>Which place would you rather live?</h4>
+          <select class="form-control" id="travel">
+            <option>America</option>
+            <option>China</option>
+            <option>Spain</option>
+            <option>Australia</option>
+            <option>The Moon</option>
+          </select>
+          <button type="submit" class="btn btn-info">SUBMIT</button>
+        </form>
+      </div>
+      <div class="initially-hidden" "survey-question">
+        <form id="form2">
+          <h4>Do you like making websites that are interactive?</h4>
+          <select class="form-control" id="interactive">
+            <option value="1" class="css">YES!</option>
+            <option value="2" class="ruby">Kinda.</option>
+            <option value="3" class="php">No preference.</option>
+            <option value="4" class="java">Not really.</option>
+            <option value="5" class="cnet">NO!</option>
+          </select>
+          <button type="submit" class="btn btn-info">SUBMIT</button>
+        </form>
+      </div>
+      <div class="initially-hidden" "survey-question">
+        <form id="form3">
+          <h4>Which animal is the coolest?</h4>
+          <select class="form-control" id="animal">
+            <option>Shark</option>
+            <option>Cobra</option>
+            <option>Elephant</option>
+            <option>Ocelot</option>
+            <option>Lassy</option>
+          </select>
+          <button type="submit" class="btn btn-info">SUBMIT</button>
+        </form>
+      </div>
+      <div class="initially-hidden" "survey-question">
+        <form id="final-form">
+          <h4>Which would you prefer?</h4>
+          <select class="form-control" id="prefer">
+            <option value="1" class="css">Freelance</option>
+            <option value="2" class="ruby">Small business</option>
+            <option value="3" class="php">I like having options.</option>
+            <option value="4" class="java">An established business.</option>
+            <option value="5" class="cnet">Enterprise company like Google or something.</option>
+          </select>
+          <button type="submit" class="btn btn-info">SUBMIT</button>
+        </form>
+      </div>
+      <div class="initially-hidden" id="result-css">
+        <h4>The best track for you is:"</h4>
+        <h1>CSS/Design</h1>
+        <p>CSS is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, and printers. HTML — used for building the structure of the page — and CSS — used for the visual layout — are the two basic languages involved in the building of web pages and web applications.</p>
+        <p>Web design is a process of conceptualizing, planning, and building a collection of electronic files that determine the layout, colors, text styles, structure, graphics, images, and use of interactive features that deliver pages to your site visitors. Web Design is a crucial component in web development, and students who learn design will be able to engineer positive and interactive user experiences through innovative interfaces. </p>
+      </div>
+      <div class="initially-hidden" id="result-ruby">
+        <h4>"The best track for you is:"</h4>
+        <h1>Ruby/Rails</h1>
+        <p>PHP is a popular programming language used for web development, especially for content-heavy websites. It's most commonly used with content management systems like WordPress, Drupal, and Joomla, but is also used in many web applications and backends as well. Students who learn to code in PHP will be able to collect form data, generate dynamic page content, send and receive cookies, and much more.</p>
+        <p>Rails is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”. Rails was the first mainstream web framework to embrace the concept of convention over configuration, which improves productivity by setting sensible defaults that work for most projects.</p>
+      </div>
+      <div class="initially-hidden" id="result-php">
+        <h4>"The best track for you is:"</h4>
+        <h1>PHP/Drupal</h1>
+        <p>PHP is a popular programming language used for web development, especially for content-heavy websites. It's most commonly used with content management systems like WordPress, Drupal, and Joomla, but is also used in many web applications and backends as well. Students who learn to code in PHP will be able to collect form data, generate dynamic page content, send and receive cookies, and much more.</p>
+        <p>Drupal is content management software (CMS) that is used to create and manage various types of websites. It allows for easy content authoring, strong security, and consistent performance. Drupal modules extend its functionality, while Drupal themes allow for customization of content presentation. Students who learn Drupal will be able to build structured and organized sites quickly and efficiently.</p>
+      </div>
+      <div class="initially-hidden" id="result-java">
+        <h4>"The best track for you is:"</h4>
+        <h1>Java/Android</h1>
+        <p>Java is arguably the most popular programming language today. It's used for everything from web applications to backend services to mobile applications to embedded systems. Students who learn Java programming will be able to create dynamic web applications, and be able continue into our Android track.</p>
+        <p>Android is a mobile operating system developed by Google, based on Linux and designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is the most popular operating system and used for a variety of purposes, including running mobile apps, taking photos, sending messages, etc. </p>
+      </div>
+      <div class="initially-hidden" id="result-cnet">
+        <h4>"The best track for you is:"</h4>
+        <h1>C#/.NET</h1>
+        <p>The C# ("C sharp") programming language is most commonly used with the .NET framework. Students who are well-versed in C# programming can use it to create client applications, database applications, distributed components, and much more.</p>
+        <p>.NET is a software framework developed by Microsoft and primarily used on Microsoft Windows. The .NET framework is used to create desktop, mobile, and web applications that run on various devices. It compiles and executes programs written in the C# and Visual Basic languages. C# and .NET are typically used by large enterprises, government agencies, and companies serving enterprises and government clients.</p>
+      </div>
+      <div id="retake" class="initially-hidden">
+        <h1>Retake Quiz</h1>
+      </div>
+    </div>
+  </body>
+</html>
